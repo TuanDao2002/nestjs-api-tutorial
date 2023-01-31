@@ -5,8 +5,8 @@ import { AuthService } from './auth.service';
 import { JwtStrategy } from './strategy';
 
 @Module({
-  imports: [JwtModule.register({})],
+  imports: [JwtModule.register({})], // import jwt module for hashing and verify token
   controllers: [AuthController],
-  providers: [AuthService, JwtStrategy],
+  providers: [AuthService, JwtStrategy], // all components that can be used in this module only
 })
 export class AuthModule {}
